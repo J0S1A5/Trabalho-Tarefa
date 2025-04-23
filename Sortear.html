@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Número Aleatório</title>
+</head>
+<body>
+  <h1>Gerador de Número Aleatório</h1> 
+  <button onclick="gerarNumeroAleatorio()">Gerar Número</button>
+  <p id="resultado"></p>
+
+  <script>
+
+    #{titulo
+        ba
+    }
+    
+    function gerarNumeroAleatorio() {
+      
+      let num1 = parseInt(prompt("Digite o primeiro número:"));
+      let num2 = parseInt(prompt("Digite o segundo número:"));
+
+      
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Por favor, digite apenas números válidos.");
+        return;
+        
+      }
+
+      let min = Math.min(num1, num2);
+      let max = Math.max(num1, num2);
+
+      let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+
+      document.getElementById("resultado").innerText = 
+        `O número aleatório entre ${min} e ${max} é: ${numeroAleatorio}`;
+    }
+  </script>
+</body>
+
+<p>
+    Anime
+    <div id="titulo"></div>
+</p>
+    
+
+
+
+</html>
